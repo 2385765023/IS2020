@@ -9,8 +9,6 @@ const cors = require('cors')
 //  创建数据库连接
 require('./model/connectMongodb')
 
-
-
 //  创建服务器
 const app = express()
 //  将跨域模块，加载到路由中
