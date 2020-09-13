@@ -64,8 +64,8 @@ app.get('/index',(req,res)=>{
   res.send('hello')
 })
 
-//  监听8080端口
-app.listen(8080)
+//  监听80端口
+app.listen(80)
 
 module.exports = app
 console.log('服务器启动成功')
