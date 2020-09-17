@@ -1,5 +1,7 @@
 //  引入express模块
 const express = require('express')
+//  引入path模块，处理路径问题
+const path = require('path')
 //  引入express-session模块
 const session = require('express-session')
 //  引入body-parser模块,用于接收POST参数
@@ -53,6 +55,9 @@ app.use((req,res,next)=>{
 
 //  挂载统一的返回结果的方法
 app.use(require('./model/sendResult'))
+
+//  访问静态资源
+app.use(express.static(path.join(__dirname,'public')))
 
 //  创建"登录"路由
 //  todo:这里其实应该应该写成use中间件，但是因为前段是vue，不需要从后端获得页面，所以写成post也行

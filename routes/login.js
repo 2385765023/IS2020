@@ -8,6 +8,7 @@ module.exports = async (req, res) => {
     const { id, password } = req.body
     //  查询用户
     const user = await User.findOne({ id })
+    console.log('login函数查询用户信息完毕')
     //  查询结果为空
     if (!user) return res.send({
         meta: {
